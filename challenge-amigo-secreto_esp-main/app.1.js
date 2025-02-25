@@ -9,7 +9,7 @@ function asignarTextoElemento(elemento, texto) {
 function agregarAmigo() {
     const nombreAmigo = document.getElementById("amigo").value.trim(); //Se investigo la funcion de trim que sirve para eliminar espacios extra
     if (nombreAmigo === "") {
-        alert('Por favor, ingresa un nombre válido en el espacio asignado.');
+        alert('Por favor, ingresa el nombre de alguno de tus amigos en la cajita de abajo por favor.');
     } else {
         amigos.push(nombreAmigo);
         mostrarListaAmigos();
@@ -47,8 +47,6 @@ function limpiarCaja() {
 
 function condicionesIniciales() {
     amigos.length = 0; 
-    asignarTextoElemento('h1', '¡Amigo Secreto!');
-    asignarTextoElemento('p', 'Escribe los nombres de tus amigos y haz el sorteo.');
     document.getElementById('resultado').innerHTML = ''; 
 }
 
@@ -56,8 +54,6 @@ function condicionesIniciales() {
 function reiniciarJuego() {
     limpiarCaja();
     condicionesIniciales();
-    alert('Escribe los nombres y luego haz el sorteo.');
 }
 
 condicionesIniciales();
-
